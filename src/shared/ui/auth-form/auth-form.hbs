@@ -1,0 +1,14 @@
+<form class="{{styles.auth-form}}">
+  <h1 class="{{styles.title}}">{{title}}</h1>
+
+  <div class="{{styles.input-container}}">
+    {{#each inputs}}
+      {{> Input styles=../styles}}
+    {{/each}}
+  </div>
+
+  <div class="{{styles.action-buttons}}">
+    {{> Button type="submit" variant="primary" size="medium" text=submitText}}
+    {{> Button size="small" text=suggestionText}}
+  </div>
+</form>

@@ -1,0 +1,53 @@
+export const inputs = [
+  {
+    name: "email",
+    placeholder: "Почта",
+    required: true,
+    pattern: "^[A-Za-z0-9@.]*$",
+    errorMessage: "Некорректная почта",
+  },
+  {
+    name: "login",
+    placeholder: "Логин",
+    required: true,
+    pattern: "^[A-Za-z0-9]*$",
+    errorMessage: "Некорректный логин",
+  },
+  {
+    name: "first_name",
+    placeholder: "Имя",
+    required: true,
+    pattern: "^[A-Za-z\u0400-\u04FF0-9]*$",
+    errorMessage: "Некорректное имя",
+  },
+  {
+    name: "second_name",
+    placeholder: "Фамилия",
+    required: true,
+    pattern: "^[A-Za-z\u0400-\u04FF0-9]*$",
+    errorMessage: "Некорректная фамилия",
+  },
+  {
+    name: "phone",
+    placeholder: "Телефон",
+    required: true,
+    pattern: "^[0-9]{11}$",
+    errorMessage: "Некорректный телефон",
+  },
+  {
+    name: "password",
+    type: "password",
+    placeholder: "Пароль",
+    required: true,
+    pattern: "^[A-Za-z0-9&^#*!]*$",
+    errorMessage: "Некорректный пароль",
+  },
+  {
+    name: "repeat_password",
+    type: "password",
+    placeholder: "Пароль (ещё раз)",
+    required: true,
+    pattern: "^[A-Za-z0-9&^#*!]*$",
+    errorMessage: "Некорректный пароль",
+  },
+];

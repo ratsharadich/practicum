@@ -1,24 +1,19 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import * as SharedComponents from "shared/ui";
+import { PAGE_NAMES } from "./shared/consts";
+import { isPage, navigate, registerComponent } from "./shared/lib";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+// register all of the shared components
+registerComponent(SharedComponents);
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// initial page render
+navigate(PAGE_NAMES.NAVIGATION);
+
+document.addEventListener("click", (e) => {
+  const page = (e.target as HTMLElement).getAttribute("page");
+  if (isPage(page)) {
+    navigate(page);
+
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+  }
+});

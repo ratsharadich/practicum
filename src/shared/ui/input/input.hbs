@@ -1,14 +1,14 @@
-<label class="{{styles.label}}">
+<label class="{{styles.input_label}}">
   <input
     name="{{name}}"
     class="{{styles.input}}"
-    placeholder="{{placeholder}}"
-    pattern="{{pattern}}"
-    min="{{min}}"
-    max="{{max}}"
+    {{#if placeholder}} placeholder="{{placeholder}}" {{/if}}
     {{#if type}} type="{{type}}" {{else}} type="text" {{/if}}
+    {{#if min}} min="{{min}}" {{/if}}
+    {{#if max}} max="{{max}}" {{/if}}
+    {{#if pattern}} pattern="{{pattern}}" {{/if}}
     {{#if required}} required="{{required}}" {{/if}} 
     />
-    <span class="{{styles.label-text}}">{{placeholder}}</span>
-    <span class="{{styles.error-message}}">{{errorMessage}}</span>
+    <span class="{{styles.input_labelText}}">{{placeholder}}</span>
+    <span class="{{styles.input_errorMessage}}">{{errorMessage}}</span>
 </label>

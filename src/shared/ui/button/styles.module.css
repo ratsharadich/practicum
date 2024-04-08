@@ -9,6 +9,18 @@
   border-radius: 0.5rem;
   transition: background-color 0.3s;
 
+  &:disabled {
+    pointer-events: none;
+
+    &[data-variant="primary"] {
+      background-color: gray;
+    }
+
+    &:not([data-variant]) {
+      color: black;
+    }
+  }
+
   &[data-variant="primary"] {
     background-color: var(--primary-color);
     color: white;
@@ -27,7 +39,8 @@
     padding: 0.75rem;
   }
 
-  &[data-size="small"] {
+  &[data-size="small"],
+  &:not([data-size]) {
     padding: 0.5rem;
     font-size: var(--text-size-small);
   }

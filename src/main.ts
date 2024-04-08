@@ -1,9 +1,9 @@
-import * as SharedComponents from "shared/ui";
+import { components as sharedComponents } from "shared/ui";
 import { PAGE_NAMES } from "./shared/consts";
 import { isPage, navigate, registerComponent } from "./shared/lib";
 
 // register all of the shared components
-registerComponent(SharedComponents);
+registerComponent(sharedComponents);
 
 // initial page render
 navigate(PAGE_NAMES.NAVIGATION);

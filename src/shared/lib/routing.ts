@@ -1,5 +1,6 @@
 import Handlebars from "handlebars";
 import { PAGE_NAMES, pages, root } from "../consts";
+import { styles as sharedStyles } from "shared/ui";
 
 export const registerComponent = (components: Record<string, string>) =>
   Object.entries(components).forEach(([name, component]) =>
@@ -10,11 +11,23 @@ export const registerComponent = (components: Record<string, string>) =>
 export const navigate = (page: keyof typeof pages) => {
   const { page: target, components, context } = pages[page];
 
+  const ownStyles = context?.styles;
+  //merge styles with shared compontnts styles to have them on the page
+  const styles = {
+    ...(typeof ownStyles === "object" && !Array.isArray(ownStyles)
+      ? ownStyles
+      : {}),
+    ...sharedStyles,
+  };
+  const newContext = context ? { ...context, styles } : { styles };
+
+  console.log({ newContext });
+
   // register all of the page hbs components created
   components && registerComponent(components);
 
   const template = Handlebars.compile(target);
-  root.innerHTML = template(context);
+  root.innerHTML = template(newContext);
 };
 
 export const isPage = (page: unknown): page is PAGE_NAMES =>

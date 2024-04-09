@@ -1,5 +1,6 @@
 export * as LoginPage from "./auth/login";
 export * as RegistartionPage from "./auth/registration";
+export * as ChatPage from "./chat";
 export * as NavigationPage from "./navigation";
 export * as InputModalPage from "./modal/input-modal";
 export * as RegularFileModalPage from "./modal/file-modal/regular";

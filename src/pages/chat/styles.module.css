@@ -1,0 +1,113 @@
+.chat-pageWrapper {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 19.375rem 1fr;
+  overflow: hidden;
+}
+
+.chat-messagesBar {
+  color: #999999;
+  background-color: #fbfbfb;
+  border-right: 1px solid #eaeaea;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  & > header {
+    display: flex;
+    z-index: 20;
+    flex-direction: column;
+    gap: 1.375rem;
+    padding: 1.375rem 1rem 0.875rem 1rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.chat-profileLink {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+}
+
+.chat-dialog {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  & > header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eaeaea;
+    margin: 0 1.25rem;
+    padding: 0.625rem 0;
+  }
+
+  & > footer {
+    display: grid;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.625rem;
+    align-items: center;
+    border-top: 1px solid #eaeaea;
+    margin: 0 1.25rem;
+    padding: 0.625rem 0;
+  }
+}
+
+/* dialog header */
+.dialog-companion {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  cursor: pointer;
+}
+
+.dialog-companionNoAvatar {
+  height: 2.125rem;
+  width: 2.125rem;
+  background-color: #efefef;
+  border-radius: 100%;
+}
+
+.dialog-kebabMenu {
+  cursor: pointer;
+}
+.dialog-uploadFile {
+  cursor: pointer;
+}
+
+.dialog-sentMessageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #3369f3;
+  height: 1.75rem;
+  width: 1.75rem;
+  cursor: pointer;
+}
+
+/* dialog content */
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  padding: 1.25rem;
+}
+
+.content-messagesDate {
+  text-align: center;
+  color: #999999;
+}

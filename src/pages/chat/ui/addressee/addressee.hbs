@@ -1,0 +1,15 @@
+<article class="{{styles.chat-addressee}}">
+  <div class="{{styles.addressee-noAvatar}}"></div>
+
+  <div class="{{styles.addressee-messageContent}}">
+    <b>{{name}}</b>
+    <span class="{{styles.addressee-messagePlaceholder}}">{{placeholder}}</span>
+  </div>
+
+  <div class={{styles.addressee-messageMeta}}>
+    <span class="{{styles.addressee-messageTime}}">{{time}}</span>
+    {{#if newMessages}}
+      <div class="{{styles.addressee-messageCounter}}">{{newMessages}}</div>
+    {{/if}}
+  </div>
+</article>

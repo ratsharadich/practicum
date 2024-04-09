@@ -21,8 +21,6 @@ export const navigate = (page: keyof typeof pages) => {
   };
   const newContext = context ? { ...context, styles } : { styles };
 
-  console.log({ newContext });
-
   // register all of the page hbs components created
   components && registerComponent(components);
 

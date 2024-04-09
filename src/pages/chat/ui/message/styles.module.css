@@ -1,0 +1,26 @@
+.content-message {
+  max-width: 25.125rem;
+  background-color: #f8f8f8;
+  padding: 0.625rem;
+  border-radius: 0.75rem;
+  border-top-left-radius: 0;
+  &[data-my] {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0;
+    margin-left: auto;
+  }
+}
+
+.content-imgContainer {
+  display: flex;
+  &[data-my] {
+    justify-content: end;
+  }
+}
+
+.content-img {
+  border-radius: 0.75rem;
+  max-width: 19.75rem;
+  max-height: 13.125rem;
+  border: 1px solid #eaeaea;
+}

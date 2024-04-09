@@ -2,6 +2,7 @@ import * as Pages from "pages";
 
 const {
   LoginPage,
+  ChatPage,
   NavigationPage,
   RegistartionPage,
   InputModalPage,
@@ -12,6 +13,7 @@ const {
 
 export enum PAGE_NAMES {
   LOGIN = "login",
+  CHAT = "chat",
   NAVIGATION = "navigation",
   REGISTRATION = "registartion",
   INPUT_MODAL = "inputModal",
@@ -33,6 +35,7 @@ export const pages: Record<
   }
 > = {
   [PAGE_NAMES.LOGIN]: LoginPage,
+  [PAGE_NAMES.CHAT]: ChatPage,
   [PAGE_NAMES.NAVIGATION]: NavigationPage,
   [PAGE_NAMES.REGISTRATION]: RegistartionPage,
   [PAGE_NAMES.INPUT_MODAL]: InputModalPage,

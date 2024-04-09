@@ -1,0 +1,30 @@
+.searchInput-label {
+  position: relative;
+}
+
+.chat-searchInput {
+  all: unset;
+  height: 2rem;
+  width: 100%;
+  background-color: #efefef;
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.5rem;
+  box-sizing: border-box;
+
+  &::placeholder {
+    opacity: 0;
+  }
+}
+
+.searchInput-placeholder {
+  position: absolute;
+  display: flex;
+  gap: 0.25rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chat-searchInput:not(:placeholder-shown) ~ .searchInput-placeholder {
+  opacity: 0;
+}

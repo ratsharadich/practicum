@@ -9,6 +9,8 @@ const {
   RegularFileModalPage,
   WithActionErrorFileModalPage,
   WithUploadErrorFileModalPage,
+  NotFoundPage,
+  ServerErrorPage,
 } = Pages;
 
 export enum PAGE_NAMES {
@@ -20,6 +22,8 @@ export enum PAGE_NAMES {
   REGUALR_FILE_MODAL = "regularFileModal",
   WITH_UPLOAD_ERROR_FILE_MODAL = "withUploadErrorFileModal",
   WITH_ACTION_ERROR_FILE_MODAL = "withActionErrorFileModal",
+  NOT_FOUND = "notFound",
+  SERVER_ERROR = "serverError",
 }
 
 // root element in intext.html
@@ -42,4 +46,6 @@ export const pages: Record<
   [PAGE_NAMES.REGUALR_FILE_MODAL]: RegularFileModalPage,
   [PAGE_NAMES.WITH_UPLOAD_ERROR_FILE_MODAL]: WithUploadErrorFileModalPage,
   [PAGE_NAMES.WITH_ACTION_ERROR_FILE_MODAL]: WithActionErrorFileModalPage,
+  [PAGE_NAMES.NOT_FOUND]: NotFoundPage,
+  [PAGE_NAMES.SERVER_ERROR]: ServerErrorPage,
 };

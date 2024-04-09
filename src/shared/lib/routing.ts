@@ -18,8 +18,11 @@ export const navigate = (page: keyof typeof pages) => {
       ? ownStyles
       : {}),
     ...sharedStyles,
+    ...(sharedStyles.default ? sharedStyles.default : {}),
   };
   const newContext = context ? { ...context, styles } : { styles };
+
+  console.log({ styles: newContext.styles });
 
   // register all of the page hbs components created
   components && registerComponent(components);

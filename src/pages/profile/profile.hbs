@@ -1,0 +1,51 @@
+<main class="{{styles.profile-pageWrapper}}">
+  <section class="{{styles.back-link}}">
+    <div class="{{styles.profile-backIconWrapper}}">{{> LeftArrowIcon}}</div>
+  </section>
+
+  <section class="{{styles.profile-content}}">
+    <header>
+        <div class="{{styles.profile-noAvatar}}">{{> PictureIcon}}</div>
+        <b>{{user.name}}</b>
+    </header>
+
+    <div class="{{styles.profile-info}}">
+        <div>
+            <span>Почта</span>
+            <span>{{user.email}}</span>
+        </div>
+        <div>
+            <span>Логин</span>
+            <span>{{user.login}}</span>
+        </div>
+         <div>
+            <span>Имя</span>
+            <span>{{user.name}}</span>
+        </div>
+        <div>
+            <span>Фамилия</span>
+            <span>{{user.lastName}}</span>
+        </div>
+         <div>
+            <span>Имя в чате</span>
+            <span>{{user.chatName}}</span>
+        </div>
+         <div>
+            <span>Телефон</span>
+            <span>{{user.number}}</span>
+        </div>
+    </div>
+
+    <footer>
+         <div>
+            <span>Изменить данные</span>
+        </div>
+         <div>
+            <span>Изменить пароль</span>
+        </div>
+         <div>
+            <span>Выйти</span>
+        </div>
+    </footer>
+  </section>
+</main>

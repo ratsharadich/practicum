@@ -1,0 +1,9 @@
+<button 
+    class="{{styles.button}}"
+    {{#if disabled}} disabled {{/if}}
+    {{#if variant}} data-variant="{{variant}}" {{/if}}
+    {{#if size}} data-size="{{size}}" {{/if}}
+    {{#if type}} type="{{type}}" {{else}} type="button" {{/if}} 
+>
+    {{text}}
+</button>

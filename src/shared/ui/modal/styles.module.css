@@ -1,0 +1,73 @@
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.modal_overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.modal_content {
+  z-index: 10;
+  width: 21.25rem;
+  height: fit-content;
+  padding: 2.5rem 1.875rem;
+  border-radius: 0.75rem;
+  background-color: white;
+
+  & > label {
+    margin-bottom: 3rem;
+  }
+}
+
+.modal_title {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 3.125rem;
+}
+
+.modal_errorTitle {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 3.125rem;
+  color: var(--alert-color);
+}
+
+.modal_uploadText {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--primary-color);
+  text-decoration: underline;
+  margin-bottom: 3rem;
+  cursor: pointer;
+
+  &:hover {
+    color: #133897;
+  }
+}
+
+.modal_actionButtonWrapper {
+  display: grid;
+}
+
+.modal_actionError {
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--alert-color);
+  margin-top: 1rem;
+}

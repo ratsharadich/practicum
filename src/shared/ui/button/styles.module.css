@@ -1,0 +1,47 @@
+.button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--text-size-medium);
+  color: var(--primary-color);
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+
+  &:disabled {
+    pointer-events: none;
+
+    &[data-variant="primary"] {
+      background-color: gray;
+    }
+
+    &:not([data-variant]) {
+      color: black;
+    }
+  }
+
+  &[data-variant="primary"] {
+    background-color: var(--primary-color);
+    color: white;
+
+    &:hover {
+      background-color: var(--primary-hover-color);
+    }
+  }
+
+  &[data-size="large"] {
+    padding: 1rem;
+    font-size: var(--text-size-large);
+  }
+
+  &[data-size="medium"] {
+    padding: 0.75rem;
+  }
+
+  &[data-size="small"],
+  &:not([data-size]) {
+    padding: 0.5rem;
+    font-size: var(--text-size-small);
+  }
+}

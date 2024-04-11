@@ -1,0 +1,22 @@
+<article>
+  {{#isImg type}}
+    <div 
+      class="{{styles.content-imgContainer}}"
+      {{#if my}} data-my="{{my}}" {{/if}}
+        >
+        <img
+        alt="message image"
+        class="{{styles.content-img}}"
+        src="https://bogatyr.club/uploads/posts/2023-02/1677453659_bogatyr-club-p-beskrainee-nebo-fon-vkontakte-55.jpg"
+        />
+    </div>
+
+  {{else}}
+
+    <div 
+      {{#if my}} data-my="{{my}}" {{/if}} 
+      class="{{styles.content-message}}">
+      {{content}}
+    </div>
+  {{/isImg}}
+</article>

@@ -1,0 +1,14 @@
+<form class="{{styles.form}}">
+  <h1 class="{{styles.form_title}}">{{title}}</h1>
+
+  <div class="{{styles.form_inputContainer}}">
+    {{#each inputs}}
+      {{> FormInput styles=../styles}}
+    {{/each}}
+  </div>
+
+  <div class="{{styles.form_actionButtons}}">
+    {{> Button type="submit" variant="primary" size="medium" text=submitText}}
+    {{> Button size="small" text=suggestionText}}
+  </div>
+</form>

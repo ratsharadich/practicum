@@ -1,0 +1,29 @@
+<div class="{{styles.modal}}">
+  <div class="{{styles.modal_overlay}}"></div>
+  <div class="{{styles.modal_content}}">
+    {{#should_upload variant}}
+      {{#if uploadError}}
+        <span class="{{styles.modal_errorTitle}}">{{uploadError}}</span>
+      {{else}}
+        <span class="{{styles.modal_title}}">Загрузить файл</span>
+      {{/if}}
+
+
+      <span class="{{styles.modal_uploadText}}">Выбрать файл на</br>компьютере</span>
+      <div class="{{styles.modal_actionButtonWrapper}}">
+        {{> Button variant="primary" size="medium" text="Поменять"}}
+        {{#if actionError}} 
+          <span class="{{styles.modal_actionError}}">{{actionError}}</span>
+        {{/if}}
+      </div>
+
+      {{else}}
+
+      {{#if title}} <span class="{{styles.modal_title}}">{{title}}</span> {{/if}}
+      {{> FormInput input styles=styles}}
+      <div class="{{styles.modal_actionButtonWrapper}}">
+        {{> Button variant="primary" size="medium" text=buttonText}}
+      </div>
+    {{/should_upload}}
+  </div>
+</div>

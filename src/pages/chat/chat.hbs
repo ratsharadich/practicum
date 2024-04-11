@@ -1,0 +1,49 @@
+<main class="{{styles.chat-pageWrapper}}">
+  <section class="{{styles.chat-messagesBar}}">
+    <header>
+      <div class="{{styles.chat-profileLink}}">Профиль {{> ProfileArrowIcon}}</div>
+      {{> SearchInput}}
+    </header>
+
+    <div class="{{styles.chat-addresseeList}}">
+      {{#each addressee}}
+        {{> Addressee styles=../styles}}
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="{{styles.chat-dialog}}">
+    <header>
+      <div class="{{styles.dialog-companion}}">
+        <div class="{{styles.dialog-companionNoAvatar}}"></div>
+        <b>{{companionName}}</b>
+      </div>
+
+      <div class="{{styles.dialog-kebabMenu}}">
+        {{> KebabMenuIcon}}
+      </div>
+    </header>
+
+    <div class="{{styles.dialog-content}}">
+        {{#each dates}}
+         <div class="{{../styles.content-messagesDate}}">{{date}}</div>
+
+          {{#each messages}}
+            {{> Message styles=../../styles}}
+          {{/each}}
+        {{/each}}
+    </div>
+
+    <footer>
+      <label class="{{styles.dialog-uploadFile}}">
+        {{> PaperClipIcon}}
+        <input type="file" style="display:none" />
+      </label>
+
+      {{> MessageInput}}
+      <div class="{{styles.dialog-sentMessageButton}}">
+        {{> RightArrowIcon}}
+      </div>
+    </footer>
+  </section>
+</main>

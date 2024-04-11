@@ -11,7 +11,9 @@ const {
   WithUploadErrorFileModalPage,
   NotFoundPage,
   ServerErrorPage,
-  ProfilePage,
+  ProfileShowPage,
+  ProfileEditCredentialsPage,
+  ProfileEditPasswordPage,
 } = Pages;
 
 export enum PAGE_NAMES {
@@ -19,13 +21,15 @@ export enum PAGE_NAMES {
   CHAT = "chat",
   NAVIGATION = "navigation",
   REGISTRATION = "registartion",
-  INPUT_MODAL = "inputModal",
-  REGUALR_FILE_MODAL = "regularFileModal",
-  WITH_UPLOAD_ERROR_FILE_MODAL = "withUploadErrorFileModal",
-  WITH_ACTION_ERROR_FILE_MODAL = "withActionErrorFileModal",
-  PROFILE = "profile",
-  NOT_FOUND = "notFound",
-  SERVER_ERROR = "serverError",
+  INPUT_MODAL = "input_modal",
+  REGUALR_FILE_MODAL = "regular_file_modal",
+  WITH_UPLOAD_ERROR_FILE_MODAL = "with_upload_error_file_modal",
+  WITH_ACTION_ERROR_FILE_MODAL = "with_action_error_file_modal",
+  PROFILE_SHOW = "profile_show",
+  PROFILE_EDIT_CREDENTIALS = "profile_edit_credentials",
+  PROFILE_EDIT_PASSWORD = "profile_edit_password",
+  NOT_FOUND = "not_found",
+  SERVER_ERROR = "server_error",
 }
 
 // root element in intext.html
@@ -50,5 +54,7 @@ export const pages: Record<
   [PAGE_NAMES.WITH_ACTION_ERROR_FILE_MODAL]: WithActionErrorFileModalPage,
   [PAGE_NAMES.NOT_FOUND]: NotFoundPage,
   [PAGE_NAMES.SERVER_ERROR]: ServerErrorPage,
-  [PAGE_NAMES.PROFILE]: ProfilePage,
+  [PAGE_NAMES.PROFILE_SHOW]: ProfileShowPage,
+  [PAGE_NAMES.PROFILE_EDIT_CREDENTIALS]: ProfileEditCredentialsPage,
+  [PAGE_NAMES.PROFILE_EDIT_PASSWORD]: ProfileEditPasswordPage,
 };

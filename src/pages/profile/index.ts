@@ -1,17 +1,34 @@
 import styles from "./styles.module.css";
 import { LeftArrowIcon, PictureIcon } from "./ui";
 
-export { default as page } from "./profile.hbs?raw";
+import { page as showPage } from "./show";
+import { page as editCredentialsPage } from "./edit-credentials";
+import { page as editPasswordPage } from "./edit-password";
+
 export const context = {
   styles,
   user: {
     // TODO: mock
     name: "Иван",
-    chatName: "Иван",
-    lastName: "Иванов",
+    display_name: "Иван",
+    second_name: "Иванов",
     email: "pochta@yandex.ru",
-    number: "+7 (909) 967 30 30",
+    phone: "+7 (909) 967 30 30",
     login: "ivanivanov",
+    old_password: "мок_пароля",
   },
 };
+
 export const components = { LeftArrowIcon, PictureIcon };
+
+export const ProfileShowPage = { page: showPage, context, components };
+export const ProfileEditCredentialsPage = {
+  page: editCredentialsPage,
+  context,
+  components,
+};
+export const ProfileEditPasswordPage = {
+  page: editPasswordPage,
+  context,
+  components,
+};

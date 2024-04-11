@@ -6,9 +6,9 @@
 
 Команды для работы с приложением:
 
-npm run dev - запуситть проект в development режиме
-npm run build - собрать проект
-npm run srart - собрать проект и запустить через express
+npm run dev - запуситть проект в development режиме<br/>
+npm run build - собрать проект<br/>
+npm run srart - собрать проект и запустить через express<br/>
 
 Макет:
 https://www.figma.com/file/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?type=design&node-id=0-1&mode=design&t=lO6VF7uRnBX76uVj-0

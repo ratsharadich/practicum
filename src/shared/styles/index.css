@@ -1,8 +1,11 @@
 :root {
   --primary-color: #3369f3;
   --primary-hover-color: #0b3ab3;
-  --error-color: #ff2f2f;
-  --error-hoveer-color: #c70000;
+  --alert-color: #ff2f2f;
+  --alert-hover-color: #c70000;
+  --border-color: #eaeaea;
+  --bar-color: #fbfbfb;
+  --secondary-color: #999999;
 
   --text-size-large: 1.25rem;
   --text-size-medium: 0.75rem;
